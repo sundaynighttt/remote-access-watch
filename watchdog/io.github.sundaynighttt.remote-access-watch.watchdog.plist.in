@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>io.github.sundaynighttt.remote-access-watch.watchdog</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>__INSTALL_ROOT__/watchdog.py</string>
+    <string>--policy</string>
+    <string>__POLICY_PATH__</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <key>ProcessType</key>
+  <string>Background</string>
+  <key>StandardOutPath</key>
+  <string>/Library/Logs/RemoteAccessWatch/watchdog.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Library/Logs/RemoteAccessWatch/watchdog.err.log</string>
+</dict>
+</plist>

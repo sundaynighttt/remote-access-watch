@@ -1,0 +1,37 @@
+{
+  "schema_version": "remote-access-watch-policy-v1",
+  "product_version": "0.1.0",
+  "mode": "observe",
+  "poll_seconds": 60,
+  "network": {
+    "wifi_interface": "auto",
+    "managed_interfaces": [],
+    "https_endpoints": [
+      "https://www.google.com/generate_204",
+      "https://www.cloudflare.com/cdn-cgi/trace"
+    ],
+    "minimum_https_successes": 1,
+    "unhealthy_threshold": 3,
+    "healthy_threshold": 2,
+    "probe_timeout_seconds": 5
+  },
+  "recovery": {
+    "airportd_restart_enabled": true,
+    "airportd_max_attempts_per_incident": 2,
+    "airportd_minimum_attempt_interval_seconds": 180,
+    "airportd_max_attempts_per_hour": 2,
+    "full_reboot_enabled": false
+  },
+  "chrome_remote_desktop": {
+    "enabled": true,
+    "user_uid": 501,
+    "launchd_label": "org.chromium.chromoting",
+    "missing_threshold": 2,
+    "max_attempts_per_incident": 1
+  },
+  "paths": {
+    "state": "/Library/Application Support/RemoteAccessWatch/state/state.json",
+    "public_status": "/Library/Application Support/RemoteAccessWatch/status.json",
+    "outbox": "/Library/Application Support/RemoteAccessWatch/incidents"
+  }
+}

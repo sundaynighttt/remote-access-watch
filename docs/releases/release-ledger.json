@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "project": "remote-access-watch",
+  "updatedAt": "2026-09-02",
+  "pointers": [
+    {
+      "key": "latest_candidate",
+      "label": "최신 후보",
+      "releaseId": "v0-1-0-b1"
+    },
+    {
+      "key": "last_installed_smoke",
+      "label": "설치 검증 최신",
+      "releaseId": "v0-1-0-b1"
+    },
+    {
+      "key": "last_external",
+      "label": "외부 처리 최신",
+      "releaseId": "v0-1-0-b1"
+    }
+  ],
+  "releases": [
+    {
+      "id": "v0-1-0-b1",
+      "sequence": 1,
+      "version": "0.1.0",
+      "build": "1",
+      "date": "2026-09-02",
+      "stage": "external_processed",
+      "status": "passed",
+      "summary": "active 설치 검증과 Developer ID 서명·Apple 공증을 통과하고 공개 GitHub 프리릴리스로 게시한 최초 후보",
+      "evidence": [
+        "docs/releases/v0.1.0-verification.md",
+        "https://github.com/sundaynighttt/remote-access-watch/releases/tag/v0.1.0"
+      ]
+    }
+  ]
+}
